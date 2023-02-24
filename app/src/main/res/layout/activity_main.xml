@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_screen_content_background_color"
+    android:orientation="vertical"
+    android:padding="@dimen/main_screen_content_padding"
+    android:scrollbars="vertical"
+    tools:context=".views.MainActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_margin="@dimen/divider_margin"
+        android:layout_marginTop="2dp"
+        android:background="@color/divider_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cityInput"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="4"
+            android:backgroundTint="#FFFFFF"
+            android:hint="@string/enter_location"
+            android:minHeight="48dp"
+            android:shadowColor="#FFFFFF"
+            android:textColor="#000000"
+            android:textColorHighlight="#686868"
+            android:textColorHint="#000000"
+            android:textColorLink="#000000" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/search"
+            android:layout_margin="2dp"
+            android:padding="2dp"/>
+
+        <Button
+            android:id="@+id/action_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/refresh"
+            android:layout_margin="2dp"
+            android:padding="2dp"
+            />
+
+        <Button
+            android:id="@+id/save_button_location"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/save"
+            android:layout_margin="2dp"
+            android:padding="2dp"
+            />
+
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.example.weatherapp1.fragments.FragmentOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        tools:layout="@layout/fragment_one" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_margin="@dimen/divider_margin"
+        android:layout_marginTop="2dp"
+        android:background="@color/divider_background" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView2"
+        android:name="com.example.weatherapp1.fragments.FragmentTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_two" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_margin="@dimen/divider_margin"
+        android:layout_marginTop="2dp"
+        android:background="@color/divider_background" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView3"
+        android:name="com.example.weatherapp1.fragments.FragmentThree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_three" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_margin="@dimen/divider_margin"
+        android:layout_marginTop="2dp"
+        android:background="@color/divider_background" />
+
+    <Button
+        android:id="@+id/goback_button_location"
+        android:layout_width="match_parent"
+        android:layout_height="25pt"
+        android:layout_margin="2dp"
+        android:layout_weight="1"
+        android:padding="2dp"
+        android:text="@string/back"
+        android:onClick="moveToMenuActivity"
+        />
+
+
+</LinearLayout>
+
+</ScrollView>
